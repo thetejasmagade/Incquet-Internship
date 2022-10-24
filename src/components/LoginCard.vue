@@ -125,7 +125,7 @@ export default {
             }).then((resp) => {
                 if (resp.data.code == 0) {
                     this.$store.commit('changeLoginFunc')
-                    this.$router.push('/products')
+                    this.$router.push('/products/')
                 } else {
                     this.LoginFailure = `<div class="mt-3 alert alert-danger" role="alert">${resp.data.message}</div>`
                     setTimeout(() => this.LoginFailure = ``, 2000);
